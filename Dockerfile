@@ -38,8 +38,8 @@ RUN wget -O - https://github.com/novnc/websockify/archive/refs/tags/v0.11.0.tar.
 WORKDIR /app
 
 # https://github.com/irwir/eMule
-RUN wget https://github.com/irwir/eMule/releases/download/eMule_v0.70a-community/eMule0.70a.zip -O /tmp/emule.zip && \
-    unzip /tmp/emule.zip -d /tmp && mv /tmp/eMule0.70a/* /app
+RUN wget https://github.com/irwir/eMule/releases/download/eMule_v0.60d-community/eMule0.60d.zip -O /tmp/emule.zip && \
+    unzip /tmp/emule.zip -d /tmp && mv /tmp/eMule0.60d/* /app
 
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY scripts /app
